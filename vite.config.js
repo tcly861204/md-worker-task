@@ -2,7 +2,6 @@ import path from 'path'
 import { defineConfig } from 'vite'
 import reactRefresh from '@vitejs/plugin-react-refresh'
 import viteCompression from 'vite-plugin-compression'
-import vitePluginImp from 'vite-plugin-imp'
 import visualizer from 'rollup-plugin-visualizer'
 import htmlMinifier from 'vite-plugin-html-minifier-terser'
 import copyPlugin from 'vite-plugin-files-copy'
@@ -40,9 +39,7 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         charset: false,
-      },
-      less: {
-        javascriptEnabled: true,
+        additionalData: '@import "./src/style/index.scss";',
       },
     },
   },
@@ -61,14 +58,6 @@ export default defineConfig({
     // 压缩编译后的html
     // @ts-ignore
     htmlMinifier(),
-    vitePluginImp({
-      libList: [
-        {
-          libName: 'antd',
-          style: (name) => `antd/es/${name}/style`,
-        },
-      ],
-    }),
     isProd &&
       viteCompression({
         // 压缩

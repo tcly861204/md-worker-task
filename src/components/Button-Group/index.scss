@@ -1,0 +1,14 @@
+.button-group {
+  .button {
+    $redius-width: 5px;
+    &:first-child {
+      border-left: 1px solid #ccc;
+      border-top-left-radius: $redius-width;
+      border-bottom-left-radius: $redius-width;
+    }
+    &:last-child {
+      border-top-right-radius: $redius-width;
+      border-bottom-right-radius: $redius-width;
+    }
+  }
+}
