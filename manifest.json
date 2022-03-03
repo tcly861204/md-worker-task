@@ -1,16 +1,19 @@
 {
   "index.html": {
-    "file": "assets/index.0ebfc7f0.js",
+    "file": "assets/index.b29550d1.js",
     "src": "index.html",
     "isEntry": true,
     "imports": [
-      "_vendor.5c7350f8.js"
+      "_vendor.6a292228.js"
     ],
     "css": [
-      "assets/index.43fda292.css"
+      "assets/index.693ffba9.css"
+    ],
+    "assets": [
+      "assets/face.04f78437.jpg"
     ]
   },
-  "_vendor.5c7350f8.js": {
-    "file": "assets/vendor.5c7350f8.js"
+  "_vendor.6a292228.js": {
+    "file": "assets/vendor.6a292228.js"
   }
 }
