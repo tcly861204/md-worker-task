@@ -1,0 +1,12 @@
+$width: 32px;
+.avatar {
+  width: $width;
+  height: $width;
+  border-radius: $width;
+  overflow: hidden;
+  img {
+    display: block;
+    width: $width;
+    height: $width;
+  }
+}

@@ -5,9 +5,9 @@ const Button = (props) => {
   const { label, onClick, active, value } = props
   return (
     <button
-      className={['button', active === value && 'active'].join(' ')}
+      className={['button', active === value ? 'active' : ''].join(' ')}
       onClick={(e) => {
-        onClick && typeof onClick === 'function' && onClick()
+        onClick && typeof onClick === 'function' && onClick(value)
         e.preventDefault()
       }}
     >

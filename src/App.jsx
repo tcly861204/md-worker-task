@@ -1,20 +1,18 @@
 import React from 'react'
 import ButtonGrop from '@/components/Button-Group'
-const DATE_TYPE_DATA = [
-  { label: '按天', value: 'day' },
-  { label: '按周', value: 'week' },
-  { label: '按月', value: 'month' },
-]
-const IS_SHOW_WORKER_DATA = [
-  { label: '仅工作日', value: 'work' },
-  { label: '显示周末', value: 'week' },
-]
+import Avatar from '@/components/avatar'
+import { DATE_TYPE_DATA, IS_SHOW_WORKER_DATA } from '@/libs/const'
+import '@/style/layout.scss'
 const App = () => {
   return (
     <section className="task">
-      app
-      <ButtonGrop data={DATE_TYPE_DATA} active="day" />
-      <ButtonGrop data={IS_SHOW_WORKER_DATA} active="work" />
+      <div className="task-header">
+        <ButtonGrop className="mr20" data={DATE_TYPE_DATA} active="day" />
+        <ButtonGrop data={IS_SHOW_WORKER_DATA} active="work" />
+      </div>
+      <div className="task-body">
+        <Avatar />
+      </div>
     </section>
   )
 }
