@@ -10,11 +10,7 @@ const env = process.argv[process.argv.length - 1]
 const isProd = env === 'production'
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: isProd ? '/md-worker/' : '/',
-  /**
-   * 与“根”相关的目录，构建输出将放在其中。如果目录存在，它将在构建之前被删除。
-   * @default 'dist'
-   */
+  base: isProd ? '/md-worker-task/' : '/',
   publicDir: 'dist',
   mode: 'development',
   resolve: {
@@ -26,14 +22,7 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 8080,
-    open: true,
-    // proxy: {
-    //   '/api': {
-    //     target: 'localhost:4000',
-    //     changeOrigin: true,
-    //     rewrite: (path) => path.replace(/^\/api/, '')
-    //   }
-    // }
+    open: true
   },
   css: {
     preprocessorOptions: {
